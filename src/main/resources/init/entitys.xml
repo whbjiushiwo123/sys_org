@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<entitys>
+    <initEntity class="OrgType" exist="0" package="com.whb.sys.org.model" method="orgTypeService.addOrgType">
+        <entity name="学校" sn="XX"></entity>
+        <entity name="分校" sn="FX"></entity>
+        <entity name="校领导办" sn="XLDB"></entity>
+        <entity name="行政部门" sn="XZBM"></entity>
+        <entity name="教学部门" sn="JXBM"></entity>
+        <entity name="专业" sn="ZY"></entity>
+        <entity name="班级" sn="BJ"></entity>
+    </initEntity>
+</entitys>

@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<entitys package="com.whb.sys.org.model">
+    <initEntity class="OrgType" exist="0"  method="orgTypeService.add">
+        <entity name="学校" sn="XX"></entity>
+        <entity name="分校" sn="FX"></entity>
+        <entity name="校领导办" sn="XLDB"></entity>
+        <entity name="行政部门" sn="XZBM"></entity>
+        <entity name="教学部门" sn="JXBM"></entity>
+        <entity name="专业" sn="ZY"></entity>
+        <entity name="班级" sn="BJ"></entity>
+    </initEntity>
+    <initEntity class="Position" exist="0"  method="positionService.add">
+        <entity name="校长" sn="XZ"></entity>
+        <entity name="副校长" sn="FXZ"></entity>
+        <entity name="处长" sn="CZ"></entity>
+        <entity name="副处长" sn="FCZ"></entity>
+        <entity name="科长" sn="KZ"></entity>
+        <entity name="辅导员" sn="FDY"></entity>
+        <entity name="班主任" sn="BZR"></entity>
+    </initEntity>
+    <initEntity package="com.whb.sys.org.basic.dto" class="InitOrgTypeRuleDto" exist="1"  method="orgTypeService.addOrgTypeRule">
+        <entity psn="XX" csn="FX" num="90"></entity>
+        <entity psn="XX" csn="XLDB" num="10"></entity>
+        <entity psn="XX" csn="XZBM" num="90"></entity>
+        <entity psn="FX" csn="JXBM" num="90"></entity>
+        <entity psn="FX" csn="XZBM" num="90"></entity>
+        <entity psn="JXBM" csn="ZY" num="90"></entity>
+        <entity psn="JXBM" csn="BJ" num="90"></entity>
+        <entity psn="ZY" csn="BJ" num="90"></entity>
+    </initEntity>
+    <initEntity class="Org" exist="0"  method="orgService.add">
+        <entity name="合肥职院" typeId="61" typeName="学校" managerType="0">
+            <entity name="学生处" typeId="64" typeName="行政部门" managerType="1"/>
+            <entity name="教务处" typeId="64" typeName="行政部门" managerType="2"/>
+            <entity name="中文系" typeId="65" typeName="教学部门" managerType="0">
+                <entity name="汉语言文学" typeId="66" typeName="专业" managerType="1">
+                    <entity name="2009汉语言文学1班" typeId="67" typeName="班级" managerType="1"/>
+                    <entity name="2009汉语言文学2班" typeId="67" typeName="班级" managerType="1"/>
+                    <entity name="2010汉语言文学1班" typeId="67" typeName="班级" managerType="1"/>
+                    <entity name="2010汉语言文学2班" typeId="67" typeName="班级" managerType="1"/>
+                    <entity name="2011汉语言文学1班" typeId="67" typeName="班级" managerType="1"/>
+                </entity>
+            </entity>
+            <entity name="计科系" typeId="65" typeName="教学部门" managerType="1">
+                <entity name="计算机应用技术" typeId="66" typeName="专业" managerType="1">
+                    <entity name="2009计算机应用技术1班" typeId="67" typeName="班级" managerType="1"/>
+                    <entity name="2009计算机应用技术2班" typeId="67" typeName="班级" managerType="1"/>
+                    <entity name="2010计算机应用技术1班" typeId="67" typeName="班级" managerType="1"/>
+                    <entity name="2010计算机应用技术2班" typeId="67" typeName="班级" managerType="1"/>
+                    <entity name="2011计算机应用技术1班" typeId="67" typeName="班级" managerType="1"/>
+                </entity>
+                <entity name="计算机信息管理" typeId="66" typeName="专业" managerType="1">
+                    <entity name="2009计算机信息管理1班" typeId="67" typeName="班级" managerType="1"/>
+                    <entity name="2009计算机信息管理2班" typeId="67" typeName="班级" managerType="1"/>
+                    <entity name="2010计算机信息管理1班" typeId="67" typeName="班级" managerType="1"/>
+                    <entity name="2010计算机信息管理2班" typeId="67" typeName="班级" managerType="1"/>
+                    <entity name="2011计算机信息管理1班" typeId="67" typeName="班级" managerType="1"/>
+                </entity>
+            </entity>
+        </entity>
+
+    </initEntity>
+    <initEntity exist="0" class="Person" method="personService.add">
+        <entity name="张三" sex="1"/>
+        <entity name="李四" sex="0"/>
+        <entity name="王五" sex="0"/>
+        <entity name="赵六" sex="0"/>
+        <entity name="曹操" sex="1"/>
+        <entity name="孙权" sex="1"/>
+        <entity name="刘备" sex="1"/>
+        <entity name="大乔" sex="0"/>
+        <entity name="小乔" sex="0"/>
+    </initEntity>
+    <initEntity exist="0" class="PersonOrgPos" method="personService.addPersonOrgPos">
+        <entity personId="1" orgId="61" positionId="22"/>
+        <entity personId="2" orgId="62" positionId="23"/>
+        <entity personId="3" orgId="63" positionId="24"/>
+        <entity personId="4" orgId="64" positionId="25"/>
+        <entity personId="5" orgId="65" positionId="26"/>
+    </initEntity>
+    <initEntity exist="0" class="User" method="userService.add">
+        <entity userId="zhangsan" personId="1"/>
+        <entity userId="lisi" personId="2"/>
+        <entity userId="wangwu" personId="3"/>
+        <entity userId="zhaoliu" personId="4"/>
+        <entity userId="caocao" personId="5"/>
+        <entity userId="sunqun" personId="6"/>
+        <entity userId="liubei" personId="7"/>
+        <entity userId="daqiao" personId="8"/>
+        <entity userId="xiaoqiao" personId="9"/>
+    </initEntity>
+</entitys>
